@@ -6,8 +6,7 @@ package com.xfj.util;
  * @version 1.0
  * @date 2017-04-19 17:08:15
  */
-public class Constant {
+public class Constant {}
 
 
-	
-}
+//~ Formatted by Jindent --- http://www.jindent.com

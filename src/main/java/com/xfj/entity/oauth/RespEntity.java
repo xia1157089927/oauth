@@ -7,44 +7,45 @@ package com.xfj.entity.oauth;
  * @date 2017-05-15 00:34:35
  */
 public class RespEntity {
+    private String  result;
+    private boolean success;
 
-	private String result;
-	private boolean success;
+    public RespEntity() {
+        super();
+    }
 
-	public RespEntity() {
-		super();
-	}
+    public RespEntity(String result, boolean success) {
+        super();
+        this.result  = result;
+        this.success = success;
+    }
 
-	public RespEntity(String result, boolean success) {
-		super();
-		this.result = result;
-		this.success = success;
-	}
+    public static RespEntity failure(String result) {
+        return new RespEntity(result, false);
+    }
 
-	public String getResult() {
-		return result;
-	}
+    public static RespEntity success(String result) {
+        return new RespEntity(result, true);
+    }
 
-	public void setResult(String result) {
-		if (result != null) {
-			this.result = result;
-		}
-	}
+    public String getResult() {
+        return result;
+    }
 
-	public boolean isSuccess() {
-		return success;
-	}
+    public void setResult(String result) {
+        if (result != null) {
+            this.result = result;
+        }
+    }
 
-	public void setSuccess(boolean success) {
-		this.success = success;
-	}
+    public boolean isSuccess() {
+        return success;
+    }
 
-	public static RespEntity success(String result) {
-		return new RespEntity(result, true);
-	}
-
-	public static RespEntity failure(String result) {
-		return new RespEntity(result, false);
-	}
-
+    public void setSuccess(boolean success) {
+        this.success = success;
+    }
 }
+
+
+//~ Formatted by Jindent --- http://www.jindent.com
